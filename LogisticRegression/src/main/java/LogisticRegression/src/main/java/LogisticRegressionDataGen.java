@@ -41,17 +41,12 @@ public class LogisticRegressionDataGen {
         
         SparkConf conf = new SparkConf().setAppName("Logisitc Regression data generation");
         SparkContext sc = new SparkContext(conf);
-        RDD<LabeledPoint> data=LogisticRegressionDataGenerator.generateLogisticRDD(sc,nExamples,
+        RDD<String> data=LRDataGen.generateLogisticRDD(sc,nExamples,
                 nFeatures,eps,numPar,probOne);
-        JavaRDD<LabeledPoint> tmpdata=data.toJavaRDD();
-        JavaRDD<String> parsedData = tmpdata.map(
-               new Function<LabeledPoint, String>() {
-                    public String call(LabeledPoint s) {                        
-                        return s.toString();
-                    }
-                }
-        );
+        JavaRDD<String> parsedData=data.toJavaRDD();
         parsedData.saveAsTextFile(output);
 		sc.stop();
     }
+
+
 }

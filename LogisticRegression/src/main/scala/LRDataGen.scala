@@ -26,7 +26,11 @@ object LRDataGen {
       val x = Array.fill[Double](nfeatures) {
         rnd.nextGaussian() + (y * eps)
       }
-      s"${y}${x.foreach(p => s",${p}").toString}"
+      var tmp = ""
+      for (point <- x) {
+        tmp += s",$point"
+      }
+      s"${y}${tmp}"
     }
     data
   }
@@ -51,7 +55,8 @@ object LRDataGen {
     val sc = new SparkContext(conf)
     val data = generateLogisticRDD(sc, nExamples, nFeatures, eps, numPar, probOne)
     val parsedData = data
-    parsedData.saveAsTextFile(output)
+    println(parsedData.collect)
+    //    parsedData.saveAsTextFile(output)
     sc.stop()
   }
 }

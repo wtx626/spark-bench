@@ -1,4 +1,5 @@
-import org.apache.spark.SparkContext
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.rdd.RDD
 
 import scala.util.Random
@@ -25,8 +26,32 @@ object LRDataGen {
       val x = Array.fill[Double](nfeatures) {
         rnd.nextGaussian() + (y * eps)
       }
-      s"${y}${x.foreach(p=>s",${p}").toString}"
+      s"${y}${x.foreach(p => s",${p}").toString}"
     }
     data
+  }
+
+  def main(args: Array[String]): Unit = {
+    if (args.length < 5) {
+      System.out.println("usage: <output> <nExamples> <nFeatures> <eps> <probone> [numPar]")
+      System.exit(0)
+    }
+    Logger.getLogger("org.apache.spark").setLevel(Level.WARN)
+    Logger.getLogger("org.eclipse.jetty.server").setLevel(Level.OFF)
+    val output = args(0)
+    val nExamples = args(1).toInt
+    val nFeatures = args(2).toInt
+    val eps = args(3).toDouble
+    val probOne = args(4).toDouble
+    val numPar = if (args.length > 5) args(5).toInt
+    else if (System.getProperty("spark.default.parallelism") != null) System.getProperty("spark.default.parallelism").toInt
+    else 2
+
+    val conf = new SparkConf().setAppName("Logisitc Regression data generation")
+    val sc = new SparkContext(conf)
+    val data = generateLogisticRDD(sc, nExamples, nFeatures, eps, numPar, probOne)
+    val parsedData = data
+    parsedData.saveAsTextFile(output)
+    sc.stop()
   }
 }

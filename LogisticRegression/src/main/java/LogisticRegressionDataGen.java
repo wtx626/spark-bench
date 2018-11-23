@@ -8,7 +8,7 @@
  *
  * @author minli
  */
-package LogisticRegression.src.main.java;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.Level;
 import org.apache.spark.mllib.util.LogisticRegressionDataGenerator;

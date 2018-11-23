@@ -1,5 +1,3 @@
-package LogisticRegression.src.main.java
-
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
 
@@ -11,7 +9,7 @@ import scala.util.Random
   * Date: 2018/11/23 
   * Time: 16:35
   */
-object LRDataGen extends App {
+object LRDataGen {
 
   def generateLogisticRDD(
                            sc: SparkContext,

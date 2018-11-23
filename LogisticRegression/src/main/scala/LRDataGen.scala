@@ -55,8 +55,7 @@ object LRDataGen {
     val sc = new SparkContext(conf)
     val data = generateLogisticRDD(sc, nExamples, nFeatures, eps, numPar, probOne)
     val parsedData = data
-    println(parsedData.collect)
-    //    parsedData.saveAsTextFile(output)
+    parsedData.saveAsTextFile(output)
     sc.stop()
   }
 }

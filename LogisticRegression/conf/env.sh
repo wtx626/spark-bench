@@ -1,5 +1,5 @@
 ## Application parameters #32G date size=400 million examples; 1G= 12.5
-NUM_OF_EXAMPLES=1000000
+NUM_OF_EXAMPLES=400000000
 NUM_OF_FEATURES=24
 ProbOne=0.2
 EPS=0.5

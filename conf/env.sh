@@ -1,11 +1,11 @@
 # global settings
 
-master="pts00450-vm16"
+master="master"
 #A list of machines where the spark cluster is running
-MC_LIST="pts00450-vm22 pts00450-vm23"
+MC_LIST="slave1 slave2"
 
 
-[ -z "$HADOOP_HOME" ] &&     export HADOOP_HOME=/YOUR/HADOOP
+[ -z "$HADOOP_HOME" ] &&     export HADOOP_HOME=/home/hadoop-2.6.5
 # base dir for DataSet
 HDFS_URL="hdfs://${master}:9000"
 SPARK_HADOOP_FS_LOCAL_BLOCK_SIZE=536870912
@@ -16,8 +16,8 @@ DATA_HDFS="hdfs://${master}:9000/SparkBench"
 #Local dataset optional
 DATASET_DIR=/home/`whoami`/SparkBench/dataset
 
-SPARK_VERSION=2.0.1  #1.5.1
-[ -z "$SPARK_HOME" ] &&     export SPARK_HOME=/YOUR/SPARK
+SPARK_VERSION=2.2.0  #1.5.1
+[ -z "$SPARK_HOME" ] &&     export SPARK_HOME=/home/spark-2.2.0
 
 #SPARK_MASTER=local
 #SPARK_MASTER=local[K]

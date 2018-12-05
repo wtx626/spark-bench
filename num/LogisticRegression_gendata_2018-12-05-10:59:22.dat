@@ -1,0 +1,35 @@
+18/12/05 10:59:24 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/12/05 10:59:25 INFO util.log: Logging initialized @2101ms
+18/12/05 10:59:25 INFO server.Server: jetty-9.3.z-SNAPSHOT
+18/12/05 10:59:25 INFO server.Server: Started @2171ms
+18/12/05 10:59:25 INFO server.AbstractConnector: Started ServerConnector@7d5f930e{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@344561e0{/jobs,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4593ff34{/jobs/json,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@30c0ccff{/jobs/job,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2b46a8c1{/jobs/job/json,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@29caf222{/stages,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5851bd4f{/stages/json,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2f40a43{/stages/stage,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3a80515c{/stages/stage/json,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1c807b1d{/stages/pool,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1b39fd82{/stages/pool/json,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@21680803{/storage,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@c8b96ec{/storage/json,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2d8f2f3a{/storage/rdd,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7048f722{/storage/rdd/json,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@58a55449{/environment,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6e0ff644{/environment/json,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2a2bb0eb{/executors,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2d0566ba{/executors/json,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7728643a{/executors/threadDump,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5167268{/executors/threadDump/json,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@28c0b664{/static,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7bdf6bb7{/,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@88d6f9b{/api,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4d0402b{/jobs/job/kill,null,AVAILABLE,@Spark}
+18/12/05 10:59:25 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7577b641{/stages/stage/kill,null,AVAILABLE,@Spark}
+18/12/05 10:59:26 INFO client.RMProxy: Connecting to ResourceManager at master/10.0.5.1:8032
+18/12/05 10:59:29 WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+18/12/05 10:59:32 INFO impl.YarnClientImpl: Submitted application application_1543331399781_0026
+18/12/05 10:59:37 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@467045c4{/metrics/json,null,AVAILABLE,@Spark}
+[Stage 0:>                                                         (0 + 0) / 10][Stage 0:>                                                         (0 + 4) / 10][Stage 0:=====>                                                    (1 + 4) / 10][Stage 0:===========>                                              (2 + 4) / 10][Stage 0:=================>                                        (3 + 4) / 10][Stage 0:=======================>                                  (4 + 4) / 10][Stage 0:==================================>                       (6 + 4) / 10][Stage 0:========================================>                 (7 + 3) / 10][Stage 0:==============================================>           (8 + 2) / 10][Stage 0:====================================================>     (9 + 1) / 10]                                                                                18/12/05 11:01:07 INFO server.AbstractConnector: Stopped Spark@7d5f930e{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}

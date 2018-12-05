@@ -1,0 +1,7 @@
+#Apptype,start_ts,duration,size,throughput,resStatus,AppType,nExe,driverMem,exeMem,exeCore,nExample,nFeature,EPS,nPar,Intercepts,nIter,memoryFraction,STEP_SIZE,noise,lambda,miniBatch,sparseness,convergenceTol
+error: gen_report input variables less than 6
+,LogisticRegression-MLlibConfig,,,,,10000000,24,0.5,10,,3,,,,,,,
+#Apptype,start_ts,duration,size,throughput,resStatus,AppType,nExe,driverMem,exeMem,exeCore,nExample,nFeature,EPS,nPar,Intercepts,nIter,memoryFraction,STEP_SIZE,noise,lambda,miniBatch,sparseness,convergenceTol
+LogisticRegression-gendata,2018-12-05-10:59:22,105.694000,4503.793727,42.611631,0,LogisticRegression-MLlibConfig,,,,,10000000,24,0.5,10,,3,,,,,,,
+#Apptype,start_ts,duration,size,throughput,resStatus,AppType,nExe,driverMem,exeMem,exeCore,nExample,nFeature,EPS,nPar,Intercepts,nIter,memoryFraction,STEP_SIZE,noise,lambda,miniBatch,sparseness,convergenceTol
+LogisticRegression-gendata,2018-12-05-11:03:03,3333.788000,180151.676231,54.038132,0,LogisticRegression-MLlibConfig,,,,,400000000,24,0.5,10,,3,,,,,,,
